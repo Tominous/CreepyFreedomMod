@@ -2,6 +2,8 @@ package me.totalfreedom.totalfreedommod.command;
 
 import me.totalfreedom.totalfreedommod.rank.Rank;
 import me.totalfreedom.totalfreedommod.util.FUtil;
+import org.apache.commons.lang.ArrayUtils;
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
@@ -11,14 +13,14 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH)
-@CommandParameters(description = "Someone being a little bitch? Smite them down...", usage = "/<command> [playername]")
+@CommandParameters(description = "Someone being a little bitch? Smite them down...", usage = "/<command> <player> [reason]")
 public class Command_smite extends FreedomCommand
 {
 
     @Override
     public boolean run(CommandSender sender, Player playerSender, Command cmd, String commandLabel, String[] args, boolean senderIsConsole)
     {
-        if (args.length != 1)
+        if (args.length < 1)
         {
             return false;
         }
@@ -31,14 +33,25 @@ public class Command_smite extends FreedomCommand
             return true;
         }
 
-        smite(player);
+        if (args.length > 1)
+        {
+            String reason = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
+            smite(player, reason);
+            return true;
+        }
+        
+        smite(player, null);
 
         return true;
     }
 
-    public static void smite(final Player player)
+    public static void smite(final Player player, final String reason)
     {
         FUtil.bcastMsg(player.getName() + " has been a naughty, naughty boy.", ChatColor.RED);
+        if (reason != null)
+        {
+            FUtil.bcastMsg(ChatColor.RED + "Reason: " + ChatColor.YELLOW + reason);
+        }
 
         //Deop
         player.setOp(false);

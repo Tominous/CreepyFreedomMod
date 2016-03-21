@@ -54,7 +54,7 @@ public class Command_whohas extends FreedomCommand
                 players.add(player.getName());
                 if (doSmite && !plugin.al.isAdmin(player))
                 {
-                    Command_smite.smite(player);
+                    Command_smite.smite(player, null);
                 }
             }
         }

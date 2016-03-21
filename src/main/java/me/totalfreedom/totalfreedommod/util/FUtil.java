@@ -832,13 +832,13 @@ public class FUtil
     public static void adminChatMessage(CommandSender sender, String message)
     {
         String name = sender.getName() + " " + TotalFreedomMod.plugin.rm.getDisplay(sender).getColoredTag() + ChatColor.WHITE;
-        FLog.info("[ADMIN] " + name + ": " + message);
+        FLog.info("[AdminChat] " + name + ": " + message);
 
         for (Player player : Bukkit.getOnlinePlayers())
         {
             if (TotalFreedomMod.plugin.al.isAdmin(player))
             {
-                player.sendMessage(colorize("&8[&3AdminChat&8] &4" + name + ":&9 " + message));
+                player.sendMessage(colorize("&8[&3AdminChat&8] &4" + name + ":&6 " + message));
             }
         }
     }

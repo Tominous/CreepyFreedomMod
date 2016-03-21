@@ -43,16 +43,13 @@ public class BukkitTelnetBridge extends FreedomService
 
         final Admin admin = plugin.al.getEntryByIp(ip, true);
 
-        if (admin.getRank() == Rank.TELNET_ADMIN && admin.getRank() == Rank.SENIOR_ADMIN)
+        if (admin == null || !admin.isActive() || !admin.getRank().hasConsole())
         {
-            if (!admin.isActive())
-            {
-                return;
-            }
-            
-            event.setBypassPassword(true);
-            event.setName(admin.getName());
+            return;
         }
+
+        event.setBypassPassword(true);
+        event.setName(admin.getName());
     }
 
     @EventHandler(priority = EventPriority.NORMAL)

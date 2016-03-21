@@ -99,7 +99,7 @@ public class Command_stfu extends FreedomCommand
 
                     if (args.length == 2 && args[1].equalsIgnoreCase("-s"))
                     {
-                        Command_smite.smite(player);
+                        Command_smite.smite(player, null);
                     }
 
                     msg("Muted " + player.getName());

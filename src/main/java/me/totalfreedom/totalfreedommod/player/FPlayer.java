@@ -396,12 +396,12 @@ public class FPlayer
             FUtil.playerMsg(this.player, ChatColor.RED + "You have been warned at least twice now, make sure to read the rules at " + ConfigEntry.SERVER_BAN_URL.getString());
         }
     }
-    
+
     public void setDoubleJump(boolean djump)
     {
         this.djump = djump;
     }
-    
+
     public boolean djumpEnabled()
     {
         return this.djump;
