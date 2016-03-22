@@ -47,10 +47,10 @@ public class Command_smite extends FreedomCommand
 
     public static void smite(final Player player, final String reason)
     {
-        FUtil.bcastMsg(player.getName() + " has been a naughty, naughty boy.", ChatColor.RED);
+        FUtil.bcastMsg(player.getName() + " has been a naughty, naughty player.", ChatColor.RED);
         if (reason != null)
         {
-            FUtil.bcastMsg(ChatColor.RED + "Reason: " + ChatColor.YELLOW + reason);
+            FUtil.bcastMsg(ChatColor.RED + "Thus been smitten for: " + ChatColor.YELLOW + reason);
         }
 
         //Deop
