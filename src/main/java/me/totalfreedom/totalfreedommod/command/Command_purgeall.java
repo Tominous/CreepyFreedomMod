@@ -62,9 +62,6 @@ public class Command_purgeall extends FreedomCommand
             }
         }
 
-        // Unfreeze all players
-        plugin.fm.purge();
-
         // Remove all mobs
         Command_mobpurge.purgeMobs();
 

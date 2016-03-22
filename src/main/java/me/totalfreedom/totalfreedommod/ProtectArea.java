@@ -51,7 +51,8 @@ public class ProtectArea extends FreedomService
         {
             if (input.exists())
             {
-                try (FileInputStream fis = new FileInputStream(input); ObjectInputStream ois = new ObjectInputStream(fis)) {
+                try (FileInputStream fis = new FileInputStream(input); ObjectInputStream ois = new ObjectInputStream(fis))
+                {
                     areas.clear();
                     areas.putAll((HashMap<String, SerializableProtectedRegion>) ois.readObject());
                 }
@@ -74,8 +75,8 @@ public class ProtectArea extends FreedomService
 
     public void save()
     {
-        try
-        (FileOutputStream fos = new FileOutputStream(new File(TotalFreedomMod.plugin.getDataFolder(), DATA_FILENAME)); ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+        try (FileOutputStream fos = new FileOutputStream(new File(TotalFreedomMod.plugin.getDataFolder(), DATA_FILENAME)); ObjectOutputStream oos = new ObjectOutputStream(fos))
+        {
             oos.writeObject(areas);
         }
         catch (Exception ex)
