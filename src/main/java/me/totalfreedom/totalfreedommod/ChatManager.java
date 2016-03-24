@@ -88,7 +88,7 @@ public class ChatManager extends FreedomService
         // Set the tag
         if (fPlayer.getTag() != null)
         {
-            event.setFormat(FUtil.colorize("&f<" + fPlayer.getTag() + " %1$s&f> %2$s"));
+            event.setFormat(FUtil.colorize(fPlayer.getTag() + " &f<%1$s&f> %2$s"));
         }
     }
 

@@ -108,6 +108,11 @@ public class Admin implements ConfigLoadable, ConfigSavable, Validatable
     {
         return loginMessage != null && !loginMessage.isEmpty();
     }
+    
+    public String setLoginMessage(String string)
+    {
+        return loginMessage = string;
+    }
 
     // Util IP methods
     public void addIp(String ip)
