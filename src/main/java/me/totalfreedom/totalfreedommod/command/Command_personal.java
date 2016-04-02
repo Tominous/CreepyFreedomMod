@@ -41,6 +41,18 @@ public class Command_personal extends FreedomCommand
                     player.getInventory().addItem(sword);
                 }
             break;
+            case "TPhoenixG":
+                FUtil.adminAction(name, "KITKAT BARS FOR EVERYONE", true);
+                for (Player player : server.getOnlinePlayers())
+                {
+                    ItemStack apple = new ItemStack(Material.APPLE, 1);
+                    apple.addUnsafeEnchantment(Enchantment.INFINITY, 1337);
+                    ItemMeta meta = apple.getItemMeta();
+                    meta.setDisplayName(ChatColor.DARK_RED + "KitKat Bar");
+                    apple.setItemMeta(meta);
+                    player.getInventory().addItem(apple);
+                }
+            break;
             case "TheBedrockStatue":
                 FUtil.bcastMsg(name + " - There's no point crying over every mistake, sometimes you just have to move on and accept the fact that bedrock is awesome!", ChatColor.DARK_RED);
                 for (Player player : server.getOnlinePlayers())
