@@ -6,27 +6,27 @@
 # Generic server information
 server:
   # You should change this to your server's name
-  name: ChickenFreedom
+  name: CreepyFreedom
 
   # The address your server is located at. Please do not include the port.
   address: cf.lemoncraft.me
 
   # Shown at the server list
-  motd: ChickenFreedom &8- Minecraft %mcversion%
+  motd: CreepyFreedom &8- Minecraft %mcversion%
 
   # Every word in the MOTD will be a different color unless prefixed by a color code
   colorful_motd: true
 
   # All players who show up as owner
   owners:
-    - markbyron
-    - BasherSpey
+    - TomCreeperMC
+    - DUFC_Liam
 
   # URL players should appeal for bans at
-  ban_url: http://chicken-craft.boards.net/
+  ban_url: http://creepfreedom.boards.net/
 
   # URL players should appeal for permanent bans at
-  permban_url: http://chicken-craft.boards.net/
+  permban_url: http://creepfreedom.boards.net/
 
 # Admin list
 adminlist:
@@ -211,6 +211,8 @@ protectarea:
 host_sender_names:
   - rcon
   - remotebukkit
+  - creepyfreedom
+  - remotecreepy
 
 # Announcer
 announcer:
@@ -220,21 +222,21 @@ announcer:
   interval: 600
 
   # Prefix for all announcements
-  prefix: '&5[&eChickenFreedom&5] &b'
+  prefix: '&8[&2CreepyFreedom&8] &9'
 
   announcements:
-    - 'Be sure to visit our forums at &6http://chicken-craft.boards.net/'
-    - 'We have the same rules as TotalFreedom: &6http://totalfreedom.me/'
+    - 'Be sure to visit our forums at &1http://creepfreedom.boards.net/'
+    - 'We have the same rules as TotalFreedom: &1http://totalfreedom.me/'
     - 'If you are not OP, be sure to ask!'
     - 'Somebody breaking the rules? Report it! /report <user> <reason>'
     - 'Griefing is not allowed!'
     - 'Hacked clients are allowed!'
-    - 'Interested in becoming admin? Do "/ai" for more information!'
-    - 'You may view all online administrators via "/list -a"'
+    - 'Interested in becoming admin? Do &1"/ai" &9for more information!'
+    - 'You may view all online administrators via &1"/list -a"'
     - 'Famous players, such as Notch, are always fake! We are an offline/cracked server!'
     - 'BasherSpey is the ChickenFreedom''s owner'
     - 'Server lagging?  Check the lag via "/tps"'
-    - 'You are allowed to record and stream videos on ChickenFreedom. :)'
+    - 'You are allowed to record and stream videos on CreepyFreedom. :D'
     - 'Player vs player while in creative or god mode it forbidden!'
     - 'Spawn killing is forbidden!'
     - 'Invisible potions are allowed!'
