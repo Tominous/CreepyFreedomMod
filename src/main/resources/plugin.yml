@@ -1,9 +1,9 @@
-name: ChickenFreedomMod
+name: CreepyFreedomMod
 main: me.totalfreedom.totalfreedommod.TotalFreedomMod
 version: ${tfm.build.version}
 description: Plugin for the Total Freedom server.
 depend: [Aero, WorldEdit]
 softdepend: [BukkitTelnet, Essentials]
-authors: [Madgeek1450, Prozza, IllX]
+authors: [TheLastWind, Prozza, _JustYellow]
 
 # plugin.yml is no longer used to define commands.
