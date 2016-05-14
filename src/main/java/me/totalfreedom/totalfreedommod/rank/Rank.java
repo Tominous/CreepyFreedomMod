@@ -13,8 +13,8 @@ public enum Rank implements RankBase
     TELNET_ADMIN(Type.ADMIN, "a", "STA", ChatColor.DARK_GREEN),
     SENIOR_ADMIN(Type.ADMIN, "a", "SrA", ChatColor.LIGHT_PURPLE),
     EXECUTIVE(Type.ADMIN, "a", "Exec", ChatColor.BLUE),
-    TELNET_CONSOLE(),
-    SENIOR_CONSOLE();
+    TELNET_CONSOLE(Type.ADMIN, "an", "Console", ChatColor.DARK_PURPLE),
+    SENIOR_CONSOLE(Type.ADMIN, "an", "Console", ChatColor.DARK_PURPLE),
     //
     @Getter
     private final Type type;
