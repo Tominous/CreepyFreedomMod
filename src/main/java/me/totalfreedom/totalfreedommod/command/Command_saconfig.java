@@ -48,6 +48,7 @@ public class Command_saconfig extends FreedomCommand
             case "wiping":
             {
                 checkConsole();
+                checkRank (Rank.SENIOR_CONSOLE);
 
                 FUtil.adminAction(sender.getName(), "Wiping the admin list", true);
                 plugin.al.deactivateOldEntries(true);
