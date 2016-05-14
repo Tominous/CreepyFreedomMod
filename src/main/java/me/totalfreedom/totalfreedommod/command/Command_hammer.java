@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = PlayerRank.SUPER_ADMIN, source = SourceType.BOTH)
-@CommandParameters(description = "Temporarily bans a player for 1 hour.", usage = "/<command> <partialname>", aliases = "dban")
+@CommandParameters(description = "Temporarily bans a player for one hour.", usage = "/<command> <partialname>", aliases = "dban")
 public class Command_hammer extends FreedomCommand
 {
 
