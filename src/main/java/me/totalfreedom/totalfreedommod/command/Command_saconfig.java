@@ -13,7 +13,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.OP, source = SourceType.BOTH)
-@CommandParameters(description = "Manage admins.", usage = "/<command> <list | clean | reload | clearme [ip] | setrank <username> <rank> | <add | remove | info> <username>>")
+@CommandParameters(description = "Manage admins.", usage = "/<command> <list | clean | wipe | reload | clearme [ip] | setrank <username> <rank> | <add | remove | info> <username>>")
 public class Command_saconfig extends FreedomCommand
 {
 
@@ -41,6 +41,17 @@ public class Command_saconfig extends FreedomCommand
                 FUtil.adminAction(sender.getName(), "Cleaning admin list", true);
                 plugin.al.deactivateOldEntries(true);
                 msg("Superadmins: " + StringUtils.join(plugin.al.getAdminNames(), ", "), ChatColor.GOLD);
+
+                return true;
+            }
+            
+            case "wiping":
+            {
+                checkConsole();
+
+                FUtil.adminAction(sender.getName(), "Wiping the admin list", true);
+                plugin.al.deactivateOldEntries(true);
+                msg("Wiped the admin list!");
 
                 return true;
             }
