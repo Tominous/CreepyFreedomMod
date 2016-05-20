@@ -8,6 +8,7 @@ public enum Title implements RankBase
 
     DEVELOPER("a", "Dev", ChatColor.DARK_PURPLE),
     OWNER("the", "Owner", ChatColor.BLUE);
+    COOWNER("a", "Co-Owner", ChatColor.BLUE);
 
     @Getter
     private final String name;
