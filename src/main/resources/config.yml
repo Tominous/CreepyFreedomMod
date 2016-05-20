@@ -21,6 +21,12 @@ server:
   owners:
     - TomCreeperMC
     - DUFC_Liam
+    
+  # All Co-Owners
+   coowners:
+    - samennis1
+    - Georgine40091
+    - ShadowPope140
 
   # URL players should appeal for bans at
   ban_url: http://creepfreedom.boards.net/
