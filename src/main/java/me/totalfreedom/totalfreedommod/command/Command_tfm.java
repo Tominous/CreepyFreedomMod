@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
  * See https://github.com/TotalFreedom/License - This file may not be edited or removed.
  */
 @CommandPermissions(level = Rank.NON_OP, source = SourceType.BOTH)
-@CommandParameters(description = "Shows information about CreepyFreedomMod or reloads it", usage = "/<command> [reload]")
+@CommandParameters(description = "Shows information about TotalFreedom or reloads it", usage = "/<command> [reload]")
 public class Command_tfm extends FreedomCommand
 {
 
@@ -39,8 +39,8 @@ public class Command_tfm extends FreedomCommand
             plugin.services.start();
 
             final String message = String.format("%s v%s reloaded.",
-                    CreepyFreedomMod.pluginName,
-                    CreepyFreedomMod.pluginVersion);
+                    TotalFreedomMod.pluginName,
+                    TotalFreedomMod.pluginVersion);
 
             msg(message);
             FLog.info(message);
@@ -50,7 +50,7 @@ public class Command_tfm extends FreedomCommand
         TotalFreedomMod.BuildProperties build = TotalFreedomMod.build;
         msg("CreepyFreedomMod for 'Creepy Freedom', the original all-op server.", ChatColor.GOLD);
         msg("Running on " + ConfigEntry.SERVER_NAME.getString() + ".", ChatColor.GOLD);
-        msg("Created by TomCreeperMC,TheLastWind,DUFC_Liam and Prozza.", ChatColor.GOLD);
+        msg("Created by Madgeek1450 and Prozza.", ChatColor.GOLD);
         msg(String.format("Version "
                 + ChatColor.BLUE + "%s.%s " + ChatColor.GOLD + "("
                 + ChatColor.BLUE + "%s" + ChatColor.GOLD + ")",
@@ -62,7 +62,7 @@ public class Command_tfm extends FreedomCommand
                 + ChatColor.BLUE + "%s",
                 build.date,
                 build.author), ChatColor.GOLD);
-        msg("Visit " + ChatColor.AQUA + "http://github.com/TomCreeperMC/CreepyFreedomMod-5.0"
+        msg("Visit " + ChatColor.AQUA + "http://github.com/TotalFreedom/TotalFreedomMod"
                 + ChatColor.GREEN + " for more information.", ChatColor.GREEN);
 
         return true;
