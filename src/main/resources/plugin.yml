@@ -1,7 +1,7 @@
 name: CreepyFreedomMod
 main: me.totalfreedom.totalfreedommod.TotalFreedomMod
 version: ${tfm.build.version}
-description: Plugin for the Total Freedom server.
+description: Plugin for the Creepy Freedom server.
 depend: [Aero, WorldEdit]
 softdepend: [BukkitTelnet, Essentials]
 authors: [TheLastWind, Prozza, _JustYellow]
