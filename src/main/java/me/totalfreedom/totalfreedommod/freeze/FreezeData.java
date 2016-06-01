@@ -61,7 +61,7 @@ public class FreezeData
             @Override
             public void run()
             {
-                FUtil.adminAction("TotalFreedom", "Unfreezing " + player.getName(), false);
+                FUtil.adminAction("CreepyFreedom", "Unfreezing " + player.getName(), false);
                 setFrozen(false);
             }
 
