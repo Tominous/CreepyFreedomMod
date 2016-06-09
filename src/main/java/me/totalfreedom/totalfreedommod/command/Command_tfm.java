@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
  * See https://github.com/TotalFreedom/License - This file may not be edited or removed.
  */
 @CommandPermissions(level = Rank.NON_OP, source = SourceType.BOTH)
-@CommandParameters(description = "Shows information about TotalFreedom or reloads it", usage = "/<command> [reload]")
+@CommandParameters(description = "Shows information about CreepyFreedom or reloads it", usage = "/<command> [reload]")
 public class Command_tfm extends FreedomCommand
 {
 
