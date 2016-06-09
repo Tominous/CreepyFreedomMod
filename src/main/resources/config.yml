@@ -9,7 +9,7 @@ server:
   name: CreepyFreedom
 
   # The address your server is located at. Please do not include the port.
-  address: cf.lemoncraft.me
+  address: cf.creepercraft.me
 
   # Shown at the server list
   motd: CreepyFreedom &8- Minecraft %mcversion%
@@ -241,8 +241,8 @@ announcer:
     - 'Interested in becoming admin? Do &1"/ai" &9for more information!'
     - 'You may view all online administrators via &1"/list -a"'
     - 'Famous players, such as Notch, are always fake! We are an offline/cracked server!'
-    - 'TomCreeperMC AND DUFC_Liam is CreepyFreedom's owner'
-    - '230Daniel AND OmgItzAFox are CreepyFreedom's Assistants owners'
+    - 'TomCreeperMC, OmgItzAFox and DUFC_Liam is CreepyFreedom's Owners.'
+    - '230Daniel, Georgino20091, samennis1 and Lukas are CreepyFreedom's Co-Owners.'
     - 'Server lagging?  Check the lag via "/tps"'
     - 'You are allowed to record and stream videos on CreepyFreedom. :D'
     - 'Player vs player while in creative or god mode it forbidden!'
@@ -291,6 +291,7 @@ famous_players:
   - dantdm
   - gizzy14gazza
   - grian
+  - thecampingrusher
 
 # IPs that can not be supered
 noadmin_ips:
@@ -302,7 +303,7 @@ petprotect:
 
 # Logviewer
 logs:
-  url: ''
+  url: 'http://creeperonline.com/apps/logviewer'
   secret: ''
 
 # Mojang service checker
