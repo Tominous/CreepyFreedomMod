@@ -4,6 +4,6 @@ version: ${tfm.build.version}
 description: Plugin for the Creepy Freedom server.
 depend: [Aero, WorldEdit]
 softdepend: [BukkitTelnet, Essentials]
-authors: [TheLastWind, Prozza, _JustYellow]
+authors: [TheLastWind, AwesomePinch, _Radation]
 
 # plugin.yml is no longer used to define commands.
