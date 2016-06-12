@@ -23,7 +23,7 @@ public class Jumppads extends FreedomService
     //
     @Getter
     @Setter
-    private JumpPadMode mode = JumpPadMode.MADGEEK;
+    private JumpPadMode mode = JumpPadMode.CREEPER;
     @Getter
     @Setter
     private double strength = 0.4;
@@ -57,7 +57,7 @@ public class Jumppads extends FreedomService
         final Block block = event.getTo().getBlock();
         final Vector velocity = player.getVelocity().clone();
 
-        if (mode == JumpPadMode.MADGEEK)
+        if (mode == JumpPadMode.CREEPER)
         {
             Boolean canPush = pushMap.get(player);
             if (canPush == null)
@@ -119,7 +119,7 @@ public class Jumppads extends FreedomService
     public static enum JumpPadMode
     {
 
-        OFF(false), NORMAL(true), NORMAL_AND_SIDEWAYS(true), MADGEEK(true);
+        OFF(false), NORMAL(true), NORMAL_AND_SIDEWAYS(true), CREEPER(true);
         private final boolean on;
 
         private JumpPadMode(boolean on)
