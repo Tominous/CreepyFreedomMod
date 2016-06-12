@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 @CommandPermissions(level = Rank.SUPER_ADMIN, source = SourceType.BOTH)
-@CommandParameters(description = "Set your own login message", usage = "/<command> <set <message>>")
+@CommandParameters(description = "Set your own login message", usage = "/<command> [-o <admin>] <set <message>>")
 public class Command_loginmsg extends FreedomCommand
 {
     @Override
@@ -20,8 +20,39 @@ public class Command_loginmsg extends FreedomCommand
         if (args.length < 2)
         {
             return false;
-        }
+            
+    
+        Player init = null;
+        Admin target = getAdmin(playerSender);
+        Player targetPlayer = playerSender;
+        String targetIp = Ips.getIp(targetPlayer);
         
+                // -o switch
+        if (args[0].equals("-o"))
+        {
+            checkRank(Rank.SENIOR_ADMIN);
+            init = playerSender;
+            targetPlayer = getPlayer(args[1]);
+            if (targetPlayer == null)
+            {
+                msg(FreedomCommand.PLAYER_NOT_FOUND);
+                return true;
+            }
+            target = getAdmin(targetPlayer);
+            if (target == null)
+            {
+                msg("That player is not admin", ChatColor.RED);
+                return true;
+            }
+
+            // Shift 2
+            args = Arrays.copyOfRange(args, 2, args.length);
+            if (args.length < 1)
+            {
+                return false;
+            }
+        }
+
         String message = StringUtils.join(ArrayUtils.subarray(args, 1, args.length), " ");
         
         if (args[0].equalsIgnoreCase("delete"))
