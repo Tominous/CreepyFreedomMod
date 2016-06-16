@@ -4,7 +4,7 @@
 
     <groupId>me.totalfreedom</groupId>
     <artifactId>creepyfreedom</artifactId>
-    <version>5.0</version>
+    <version5.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -18,7 +18,7 @@
         <maven.build.timestamp.format>dd/MM/yyyy hh:mm aa</maven.build.timestamp.format>
     </properties>
 
-    <name>TotalFreedomMod</name>
+    <name>CreepyFreedomMod</name>
     <description>Server modification for the TotalFreedom server</description>
     <url>https://github.com/TotalFreedom/TotalFreedomMod</url>
 
